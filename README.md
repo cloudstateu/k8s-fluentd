@@ -48,7 +48,6 @@ npm run docker
 ```bash
 az acr create -n acrdev$RANDOM -g aks-dev --sku Basic --admin-enabled true
 az acr credential show -n <nazwa_ACR>
-docker login <nazwa_ACR>.azurecr.io # login: <nazwa_ACR>; password: (z poprzedniego kroku)
 az acr build -t <nazwa_ACR>.azureio.cr/lb-multiline-logs:latest -r <nazwa_ACR> .
 az acr repository list --name <nazwa_ACR>
 az acr repository show-tags --name acrdev22441 --repository lb-multiline-logs
